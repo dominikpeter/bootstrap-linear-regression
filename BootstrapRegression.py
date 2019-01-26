@@ -15,7 +15,7 @@ class BootstrapRegression(LinearRegression):
             np.arange(0, len(X)), size=len(X))
         return X[idx], y[idx]
     
-    def bootstrap(self, X, y, n=1000):
+    def bootstrap(self, X, y, n=1000, **kwargs):
         self.boot_coef = np.zeros(shape=n)
         self.boot_intercept = np.zeros(shape=n)
         self.boot_score = np.zeros(shape=n)
